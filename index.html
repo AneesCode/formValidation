@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+   
+
+    <title>form validation</title>
+    <style>
+        .err {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Form</h1>
+        <form name="myForm" id="contact-form" onsubmit=" validateForm(); reset(); return false ">
+            <div class="form-group">
+                <label for="first-name">Name</label>
+                <input type="text" id="first-name" name="first-name">
+                <span id="name" class="err"></span>
+            </div>
+            <!-- <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name">
+                <span id="lname" class="err"></span>
+            </div> -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <span id="eemail" class="err"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <span id="Password" class="err"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="date" id="age" name="age">
+                <span id="age1" class="err"></span>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="laocation" name="location">
+                <span id="laocation1" class="err"></span>
+            </div>
+            <div class="form-group select-box">
+                <label for="Phone">Phone</label>
+                <div class="select-option" style="display: flex; align-items: center; gap: 10px;">
+                    <select name="" onchange="country_code()" id="country">
+                    </select>
+                        <input type="tel" id="phone" name="phone">
+                        <span id="phoneNo" class="err"></span>
+                    
+                </div>
+            </div>
+            <button type="submit" >Submit</button>
+        </form>
+        <p style="text-align: center;" id="error"></p>
+    </div>
+ 
+
+    <script src="script.js"> </script>
+  
+</body>
+
+</html>
